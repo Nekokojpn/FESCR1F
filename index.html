@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<head>
+    <title>FE採点</title>
+    <style>
+        body{
+            background-color:grey;
+        }
+        p{
+            font-size:20px;
+            color:aliceblue;
+        }
+        td{
+            color:aliceblue;
+        }
+        .auto-style1 {
+            width: 119px;
+        }
+        .auto-style2 {
+            width: 119px;
+            height: 22px;
+        }
+        .auto-style3 {
+            height: 22px;
+        }
+        .auto-style4 {
+            width: 619px;
+        }
+    </style>
+    <script>
+    var tbs = new Map([
+        ["s1", 2], ["s2" , 3], ["s3", 3], ["s4", 4],
+        ["sf1", 2], ["sf2", 2], ["sf3", 1.5], ["sf4", 1.5], ["sf5", 5],
+        ["d1", 3], ["d2", 2], ["d3", 3], ["d4", 2], ["d5", 2],
+        ["n1", 3], ["n2", 3], ["n3", 2], ["n4", 2], ["n5", 2],
+        ["e1", 2], ["e2", 2], ["e3", 2], ["e4", 2], ["e5", 2], ["e6", 2],
+        ["p1", 3], ["p2", 2], ["p3", 2], ["p4", 3], ["p5", 1], ["p6", 1],
+        ["st1", 2], ["st2", 2], ["st3", 2], ["st4", 3], ["st5", 3],
+        ["a1", 2], ["a2", 2], ["a3", 2], ["a4", 2], ["a5", 2], ["a6", 2], ["a7", 2], ["a8", 2], ["a9", 4],
+        ["c1", 3], ["c2", 3], ["c3", 3], ["c4", 3], ["c5", 3], ["c6", 5],
+        ["j1", 3], ["j2", 3], ["j3", 3], ["j4", 3], ["j5", 3], ["j6", 5],
+        ["h1", 3], ["h2", 3], ["h3", 3], ["h4", 3], ["h5", 3], ["h6", 5]
+    ]);
+    function scoring() {
+        p = 0;
+        tbs.forEach(function (val, key) {
+            var elm = document.getElementById(key);
+            if (elm.checked == true) p += val;
+        });
+        document.getElementById("pointtxt").innerText = p;
+    }
+    </script>
+</head>
+<body>
+    <div>
+        <p>令和元年(&#39;19)秋　基本情報技術者試験採点ツール</p>
+    </div>
+    <p>
+
+        正答にチェック</p>
+        <table>
+        <tr>
+            <td class="auto-style1">セキュリティ</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style2">問1&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a</td>
+            <td class="auto-style3">
+                <input id="s1" type="checkbox" /></td>
+        </tr>
+        <tr>
+            <td class="auto-style1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; b&nbsp;</td>
+            <td>
+                <input id="s2" type="checkbox" /></td>
+        </tr>
+             <tr>
+            <td class="auto-style1">問2</td>
+            <td>
+                <input id="s3" type="checkbox" /></td>
+        </tr>
+             <tr>
+            <td class="auto-style1">問3&nbsp;</td>
+            <td>
+                <input id="s4" type="checkbox" /></td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td class="auto-style1">ソフトウェア</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style2">問1&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a</td>
+            <td class="auto-style3">
+                <input id="sf1" type="checkbox" /></td>
+        </tr>
+        <tr>
+            <td class="auto-style1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; b&nbsp;</td>
+            <td>
+                <input id="sf2" type="checkbox" /></td>
+        </tr>
+             <tr>
+            <td class="auto-style1">問2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c</td>
+            <td>
+                <input id="sf3" type="checkbox" /></td>
+        </tr>
+             <tr>
+            <td class="auto-style1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; d&nbsp;</td>
+            <td>
+                <input id="sf4" type="checkbox" /></td>
+        </tr>
+        <tr>
+            <td class="auto-style1">問3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; e&nbsp;</td>
+            <td>
+                <input id="sf5" type="checkbox" /></td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td class="auto-style1">データベース</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style2">問1&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a</td>
+            <td class="auto-style3">
+                <input id="d1" type="checkbox" /></td>
+        </tr>
+        <tr>
+            <td class="auto-style1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; b&nbsp;</td>
+            <td>
+                <input id="d2" type="checkbox" /></td>
+        </tr>
+             <tr>
+            <td class="auto-style1">問2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c</td>
+            <td>
+                <input id="d3" type="checkbox" /></td>
+        </tr>
+             <tr>
+            <td class="auto-style1">問3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; d&nbsp;</td>
+            <td>
+                <input id="d4" type="checkbox" /></td>
+        </tr>
+        <tr>
+            <td class="auto-style1">&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; e&nbsp;</td>
+            <td>
+                <input id="d5" type="checkbox" /></td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td class="auto-style1">ネットワーク</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style2">問1&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+            <td class="auto-style3">
+                <input id="n1" type="checkbox" /></td>
+        </tr>
+        <tr>
+            <td class="auto-style1">問2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; a&nbsp;</td>
+            <td>
+                <input id="n2" type="checkbox" /></td>
+        </tr>
+             <tr>
+            <td class="auto-style1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b</td>
+            <td>
+                <input id="n3" type="checkbox" /></td>
+        </tr>
+             <tr>
+            <td class="auto-style1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c&nbsp;</td>
+            <td>
+                <input id="n4" type="checkbox" /></td>
+        </tr>
+        <tr>
+            <td class="auto-style1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; d&nbsp;</td>
+            <td>
+                <input id="n5" type="checkbox" /></td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td class="auto-style1">ソフトウェア設計</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style2">問1&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a</td>
+            <td class="auto-style3">
+                <input id="e1" type="checkbox" /></td>
+        </tr>
+        <tr>
+            <td class="auto-style1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; b&nbsp;</td>
+            <td>
+                <input id="e2" type="checkbox" /></td>
+        </tr>
+             <tr>
+            <td class="auto-style1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c</td>
+            <td>
+                <input id="e3" type="checkbox" /></td>
+        </tr>
+             <tr>
+            <td class="auto-style1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; d&nbsp;</td>
+            <td>
+                <input id="e4" type="checkbox" /></td>
+        </tr>
+        <tr>
+            <td class="auto-style1">問2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; e&nbsp;</td>
+            <td>
+                <input id="e5" type="checkbox" /></td>
+        </tr>
+        <tr>
+            <td class="auto-style1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; f&nbsp;</td>
+            <td>
+                <input id="e6" type="checkbox" /></td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td class="auto-style1">プロマネ</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style2">問1&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a</td>
+            <td class="auto-style3">
+                <input id="p1" type="checkbox" /></td>
+        </tr>
+        <tr>
+            <td class="auto-style1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; b&nbsp;</td>
+            <td>
+                <input id="p2" type="checkbox" /></td>
+        </tr>
+             <tr>
+            <td class="auto-style1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c</td>
+            <td>
+                <input id="p3" type="checkbox" /></td>
+        </tr>
+             <tr>
+            <td class="auto-style1">問2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; d&nbsp;</td>
+            <td>
+                <input id="p4" type="checkbox" /></td>
+        </tr>
+        <tr>
+            <td class="auto-style1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; e&nbsp;</td>
+            <td>
+                <input id="p5" type="checkbox" /></td>
+        </tr>
+        <tr>
+            <td class="auto-style1">問3&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; f&nbsp;</td>
+            <td>
+                <input id="p6" type="checkbox" /></td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td class="auto-style1">ストラ</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style2">問1&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a</td>
+            <td class="auto-style3">
+                <input id="st1" type="checkbox" /></td>
+        </tr>
+        <tr>
+            <td class="auto-style1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; b&nbsp;</td>
+            <td>
+                <input id="st2" type="checkbox" /></td>
+        </tr>
+             <tr>
+            <td class="auto-style1">問2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c</td>
+            <td>
+                <input id="st3" type="checkbox" /></td>
+        </tr>
+             <tr>
+            <td class="auto-style1">問3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; d&nbsp;</td>
+            <td>
+                <input id="st4" type="checkbox" /></td>
+        </tr>
+        <tr>
+            <td class="auto-style1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; e&nbsp;</td>
+            <td>
+                <input id="st5" type="checkbox" /></td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td class="auto-style1">アルゴ</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style2">問1&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a</td>
+            <td class="auto-style3">
+                <input id="a1" type="checkbox" /></td>
+        </tr>
+        <tr>
+            <td class="auto-style1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; b&nbsp;</td>
+            <td>
+                <input id="a2" type="checkbox" /></td>
+        </tr>
+             <tr>
+            <td class="auto-style1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c</td>
+            <td>
+                <input id="a3" type="checkbox" /></td>
+        </tr>
+             <tr>
+            <td class="auto-style1">問2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; d&nbsp;</td>
+            <td>
+                <input id="a4" type="checkbox" /></td>
+        </tr>
+        <tr>
+            <td class="auto-style1">&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; e&nbsp;</td>
+            <td>
+                <input id="a5" type="checkbox" /></td>
+        </tr>
+        <tr>
+            <td class="auto-style1">&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; f&nbsp;</td>
+            <td>
+                <input id="a6" type="checkbox" /></td>
+        </tr>
+        <tr>
+            <td class="auto-style1">問3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;g</td>
+            <td>
+                <input id="a7" type="checkbox" /></td>
+        </tr>
+        <tr>
+            <td class="auto-style1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;h</td>
+            <td>
+                <input id="a8" type="checkbox" /></td>
+        </tr>
+        <tr>
+            <td class="auto-style1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i</td>
+            <td>
+                <input id="a9" type="checkbox" /></td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td class="auto-style1">C</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style2">問1&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a</td>
+            <td class="auto-style3">
+                <input id="c1" type="checkbox" /></td>
+        </tr>
+        <tr>
+            <td class="auto-style1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; b&nbsp;</td>
+            <td>
+                <input id="c2" type="checkbox" /></td>
+        </tr>
+             <tr>
+            <td class="auto-style1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c</td>
+            <td>
+                <input id="c3" type="checkbox" /></td>
+        </tr>
+             <tr>
+            <td class="auto-style1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; d&nbsp;</td>
+            <td>
+                <input id="c4" type="checkbox" /></td>
+        </tr>
+        <tr>
+            <td class="auto-style1">問2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; e&nbsp;</td>
+            <td>
+                <input id="c5" type="checkbox" /></td>
+        </tr>
+        <tr>
+            <td class="auto-style1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f</td>
+            <td>
+                <input id="c6" type="checkbox" /></td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td class="auto-style1">Java</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style2">問1&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a</td>
+            <td class="auto-style3">
+                <input id="j1" type="checkbox" /></td>
+        </tr>
+        <tr>
+            <td class="auto-style1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; b&nbsp;</td>
+            <td>
+                <input id="j2" type="checkbox" /></td>
+        </tr>
+             <tr>
+            <td class="auto-style1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c</td>
+            <td>
+                <input id="j3" type="checkbox" /></td>
+        </tr>
+             <tr>
+            <td class="auto-style1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; d&nbsp;</td>
+            <td>
+                <input id="j4" type="checkbox" /></td>
+        </tr>
+        <tr>
+            <td class="auto-style1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; e&nbsp;</td>
+            <td>
+                <input id="j5" type="checkbox" /></td>
+        </tr>
+         <tr>
+            <td class="auto-style1">問2&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td>
+                <input id="j6" type="checkbox" /></td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td class="auto-style1">表計算</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style2">問1&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a</td>
+            <td class="auto-style3">
+                <input id="h1" type="checkbox" /></td>
+        </tr>
+        <tr>
+            <td class="auto-style1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; b&nbsp;</td>
+            <td>
+                <input id="h2" type="checkbox" /></td>
+        </tr>
+             <tr>
+            <td class="auto-style1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c</td>
+            <td>
+                <input id="h3" type="checkbox" /></td>
+        </tr>
+             <tr>
+            <td class="auto-style1">問2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; d&nbsp;</td>
+            <td>
+                <input id="h4" type="checkbox" /></td>
+        </tr>
+        <tr>
+            <td class="auto-style1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; e&nbsp;</td>
+            <td>
+                <input id="h5" type="checkbox" /></td>
+        </tr>
+         <tr>
+            <td class="auto-style1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; f&nbsp;</td>
+            <td>
+                <input id="h6" type="checkbox" /></td>
+        </tr>
+    </table>
+    <p>
+        <input id="Button1" type="button" value="採点!" onclick="scoring()"/></p>
+    <p>
+        <textarea id="pointtxt" class="auto-style4" name="S1" rows="2"></textarea></p>
+</body>
